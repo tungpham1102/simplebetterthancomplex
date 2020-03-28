@@ -1,6 +1,9 @@
 body {
     background-image: url(../img/default.jpg);
+    height: 100%;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .logo {
     font-family: 'Peralta', cursive;

@@ -27,10 +27,10 @@
     <tbody>
         {% for topic in boards.topics.all %}
         <tr>
-            <td>{{ topic.subject }}</td>
-            <td>{{ user.username }}</td>
-            <td>0</td>
-            <td>0</td>
+            <td><a href="{% url 'boards:topic_posts' topic.board.pk topic.pk %}">{{ topic.subject }}</a></td>
+            <td>{{ topic.starter.username }}</td>
+            <td>{{ topic.replies }}</td>
+            <td>{{ topic.views }}</td>
             <td>{{ topic.last_updated }}</td>
         </tr>
         {% endfor %}
